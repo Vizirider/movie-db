@@ -7,7 +7,7 @@
   <div class="ui floating message" id="main" >
     <div class="ui padded grid" id="content">
       <div class="middle aligned sixteen wide mobile eight wide tablet four wide computer column">
-        <img *ngIf="selectedMovie?.poster_path" class="ui fluid image" src="https://image.tmdb.org/t/p/w600{{selectedMovie?.poster_path}}">
+        <img *ngIf="selectedMovie?.poster_path" class="ui fluid image" src="https://image.tmdb.org/t/p/w500{{selectedMovie?.poster_path}}">
       </div>
 
       <div class="sixteen wide mobile eight wide tablet twelve wide computer column">
@@ -37,8 +37,12 @@
               <i class="ui yellow label">IMDb</i>
             </a>
 
-            <a *ngIf="selectedMovie?.homepage" href="{{ selectedMovie?.homepage }}/">
-              <i class="ui label">WWW</i>
+            <a *ngIf="selectedMovie?.title" href="https://en.wikipedia.org/wiki/{{ selectedMovie?.title }}">
+              <i class="ui label">Wiki</i>
+            </a>
+
+            <a *ngIf="selectedMovie?.homepage" href="{{ selectedMovie?.homepage }}">
+              <i class="ui blue label">WWW</i>
             </a>
           </div>
           <!-- -->
