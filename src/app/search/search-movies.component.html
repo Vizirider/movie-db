@@ -38,6 +38,11 @@
   </div>
 
   <div class="ui link five doubling cards">
+    <div class="d-flex justify-content-center">
+      <div class="spinner-border" role="status" >
+        <span class="sr-only" id="loading"></span>
+      </div>
+    </div>
     <div class="card" *ngFor="let movie of movies" [routerLink]="['/movie/'+movie.id]" routerLinkActive="active">
       <div class="image">
         <img *ngIf="movie.poster_path" class="ui middle aligned tiny image" src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}">

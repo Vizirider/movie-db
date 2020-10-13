@@ -46,9 +46,16 @@ export class SearchMoviesComponent implements OnInit {
           this.total_results = response['total_results'];
           this.total_pages = response['total_pages'];
           this.page = response['page'];
+          if (Response) { 
+            hideloader(); 
+        } 
         },
         error => console.error(error)
       );
+      function hideloader() { 
+        document.getElementById('loading') 
+            .style.display = 'none'; 
+    } 
   }
 
   dynamicSort(property) {
